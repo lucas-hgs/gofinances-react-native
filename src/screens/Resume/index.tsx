@@ -44,9 +44,9 @@ interface CategoryData {
 }
 
 export function Resume() {
-  const [totalByCategories, setTotalByCategories] = useState<CategoryData[]>([]);
-  const [selectedDated, setSelectedDate] = useState(new Date);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedDated, setSelectedDate] = useState(new Date);
+  const [totalByCategories, setTotalByCategories] = useState<CategoryData[]>([]);
 
   const theme = useTheme();
 
