@@ -37,11 +37,11 @@ interface TransactionData {
 
 interface CategoryData {
   key: string;
-  name: string;
-  total: number;
+  name: string; 
   totalFormatted: string;
   color: string;
-  percent: string;
+  x: string;
+  y: number;
 }
 
 export function Resume() {
@@ -104,9 +104,9 @@ export function Resume() {
           key: category.key,
           name: category.name,
           color: category.color,
-          total: categorySum,
           totalFormatted,
-          percent
+          x: percent,
+          y: categorySum
         });
       }
     });
@@ -167,9 +167,7 @@ export function Resume() {
                   fill: theme.colors.shape
                 }
               }}
-              labelRadius={50}
-              x="percent"
-              y="total"
+              labelRadius={120}
             />
           </ChartContainer>
 
