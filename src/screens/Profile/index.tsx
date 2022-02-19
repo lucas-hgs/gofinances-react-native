@@ -9,14 +9,24 @@ import {
 export function Profile(){
   return (
     <View>
-      <Text>Perfil</Text>
+      <Text
+        testID='text-title'
+      >
+        Perfil
+      </Text>
 
       <TextInput
+        testID='input-name'
         placeholder='Nome'
         autoCorrect={false}
+        value="Lucas"
       />
 
-      <TextInput placeholder='Sobrenome' />
+      <TextInput 
+        testID='input-surname' 
+        placeholder='Sobrenome' 
+        value="Henrique"
+      />
 
       <Button title='Salvar' onPress={() => {}} />
     </View>
